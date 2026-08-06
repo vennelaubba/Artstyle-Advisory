@@ -1,0 +1,476 @@
+/* =========================================================
+   ARTSTYLE ADVISOR
+   Reference UI Styling
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+/* =========================================================
+   GLOBAL
+   ========================================================= */
+
+html,
+body,
+[class*="css"] {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.stApp {
+    min-height: 100vh;
+}
+
+/* Remove Streamlit default top space */
+.block-container {
+    max-width: 950px !important;
+    padding-top: 35px !important;
+    padding-bottom: 40px !important;
+}
+
+/* Hide Streamlit menu */
+#MainMenu {
+    visibility: hidden;
+}
+
+footer {
+    visibility: hidden;
+}
+
+header {
+    visibility: hidden;
+}
+
+
+/* =========================================================
+   BACKGROUND OVERLAY
+   ========================================================= */
+
+.stApp::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.18);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.main {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   TITLE
+   ========================================================= */
+
+.app-title{
+    text-align:center;
+    margin-top:25px;
+    margin-bottom:8px;
+
+    font-size:42px;
+    font-weight:800;
+
+    color:#55209a;
+
+    position:relative;
+    right:18px;      /* move title slightly right */
+
+    text-shadow:0 2px 5px rgba(88,32,154,.12);
+}
+
+
+/* =========================================================
+   SUBTITLE
+   ========================================================= */
+
+.app-subtitle {
+    text-align: center;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    color: #55505b;
+
+    margin-bottom: 42px;
+}
+
+/* =========================================================
+   INPUT LABEL
+   ========================================================= */
+
+.input-label {
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: #54208e;
+
+    margin-bottom: 15px;
+
+    padding-left: 2px;
+
+    margin-left:120px;
+}
+
+
+/* =========================================================
+   TEXT AREA
+   ========================================================= */
+
+.stTextArea textarea {
+
+    background: rgba(255, 255, 255, 0.923) !important;
+
+    border: 2px solid #7731b4 !important;
+
+    border-radius: 16px !important;
+
+    color: #190101 !important;
+
+    font-family: 'Poppins', sans-serif !important;
+
+    font-size: 17px !important;
+
+    padding: 20px !important;
+
+    resize: none !important;
+
+    box-shadow:
+        0 5px 18px rgba(91, 34, 148, 0.07) !important;
+
+    backdrop-filter: blur(5px);
+}
+/* Center text area */
+
+div[data-testid="stTextArea"]{
+    width:75% !important;
+    margin:auto !important;
+}
+
+.stTextArea textarea{
+    min-height:170px !important;
+    font-size:18px !important;
+}
+
+
+.stTextArea textarea:focus {
+
+    border: 2px solid #7121b0 !important;
+
+    box-shadow:
+        0 0 0 2px rgba(113, 33, 176, 0.12) !important;
+}
+
+
+/* Placeholder */
+
+.stTextArea textarea::placeholder {
+    color: #2b0354 !important;
+
+    opacity: 1 !important;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+/* Button container */
+
+div[data-testid="stButton"]{
+    display:flex !important;
+    justify-content:center !important;
+    margin-top:20px !important;
+}
+
+/* Button */
+
+.stButton > button{
+
+    width:75% !important;
+
+    height:58px !important;
+
+    margin:auto !important;
+
+    border-radius:15px !important;
+    background: linear-gradient(
+    90deg,
+    #9c76a9,
+    #7E57C2
+) !important;
+}
+
+
+/* =========================================================
+   RESPONSE CARD
+   ========================================================= */
+
+div[data-testid="stVerticalBlockBorderWrapper"] {
+
+    background: rgba(29, 1, 1, 0.899) !important;
+
+    border: 1px solid rgba(117, 36, 171, 0.22) !important;
+
+    border-radius: 20px !important;
+
+    padding: 25px !important;
+
+    margin-top: 28px !important;
+
+    box-shadow:
+        0 10px 30px rgba(91, 34, 148, 0.09) !important;
+
+    backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   RESPONSE TITLE
+   ========================================================= */
+
+.response-title {
+
+    color: #5d1e99;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+.response-divider {
+
+    border: none;
+
+    border-top: 1px solid rgba(99, 28, 150, 0.15);
+
+    margin: 12px 0 20px 0;
+}
+
+
+/* =========================================================
+   RESPONSE TEXT
+   ========================================================= */
+
+.response-text {
+
+    color: #0b0115;
+
+    font-size: 16px;
+
+    line-height: 1.75;
+}
+
+
+.section-heading {
+
+    color: #6520a1;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    margin-top: 18px;
+
+    margin-bottom: 5px;
+}
+
+
+.section-line {
+
+    color: #55505a;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    margin-bottom: 4px;
+}
+
+
+/* =========================================================
+   IMAGE
+   ========================================================= */
+
+.stImage {
+
+    margin-top: 25px;
+}
+
+
+.stImage img {
+
+    border-radius: 18px !important;
+
+    box-shadow:
+        0 12px 30px rgba(73, 25, 117, 0.18) !important;
+}
+
+
+/* =========================================================
+   DOWNLOAD BUTTON
+   ========================================================= */
+
+.stDownloadButton > button {
+
+    height: 55px !important;
+
+    border-radius: 13px !important;
+
+    border: 2px solid #7325aa !important;
+
+    background: rgba(255,255,255,0.55) !important;
+
+    color: #63209b !important;
+
+    font-weight: 600 !important;
+}
+
+
+.stDownloadButton > button:hover {
+
+    background: #7624ad !important;
+
+    color: white !important;
+}
+
+
+/* =========================================================
+   WARNING / SUCCESS
+   ========================================================= */
+
+div[data-testid="stAlert"] {
+
+    border-radius: 13px !important;
+
+    font-family: 'Poppins', sans-serif !important;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+section[data-testid="stSidebar"] {
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(245, 232, 255, 0.97),
+            rgba(255, 245, 250, 0.97)
+        ) !important;
+}
+
+
+section[data-testid="stSidebar"] h1 {
+
+    color: #5b1c98 !important;
+
+    font-weight: 700 !important;
+}
+
+
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3 {
+
+    color: #63229c !important;
+}
+
+
+section[data-testid="stSidebar"] p {
+
+    color: #5a5360 !important;
+
+    line-height: 1.7 !important;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+
+    text-align: center;
+
+    margin-top: 130px;
+
+    margin-bottom: 15px;
+
+    color: #64209c;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .block-container {
+
+        padding-left: 20px !important;
+
+        padding-right: 20px !important;
+
+    }
+
+    .app-title {
+
+        font-size: 30px;
+
+    }
+
+    .app-subtitle {
+
+        font-size: 15px;
+
+        margin-bottom: 30px;
+
+    }
+
+    div[role="radiogroup"] {
+
+        gap: 8px !important;
+
+    }
+
+    div[role="radiogroup"] > label {
+
+        min-width: 115px !important;
+
+    }
+
+.input-label{
+
+    text-align:center;
+
+    margin-bottom:18px;
+
+    padding-left:0 !important;
+}
+
+    .stButton > button {
+
+        height: 65px !important;
+
+        font-size: 17px !important;
+
+    }
+
+    .footer {
+
+        margin-top: 80px;
+
+        font-size: 13px;
+
+    }
+
+}

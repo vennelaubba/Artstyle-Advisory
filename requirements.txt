@@ -1,0 +1,8 @@
+streamlit>=1.60.0
+langchain
+langchain-core
+langchain-groq
+python-dotenv
+requests
+Pillow
+streamlit-option-menu
